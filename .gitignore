@@ -169,3 +169,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# files ignored in project
+data/*.json
+testing.ipynb
