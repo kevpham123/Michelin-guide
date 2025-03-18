@@ -18,11 +18,12 @@ def format_categories(categories_str):
 postgres.query("""
 DROP DATABASE IF EXISTS Yelp;
 """,
-db_name='yelp', output=False)
+db_name='postgres', output=False)
+
 postgres.query("""
 CREATE DATABASE Yelp;
 """,
-db_name='yelp', output=False)
+db_name='postgres', output=False)
 
 """
 This section is used to initialize the businesses relation for our Yelp database

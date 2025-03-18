@@ -1,8 +1,8 @@
 import os
 import json
 import pymongo
-import psycopg as psycopg
 import pandas as pd
+import psycopg as psycopg
 from dotenv import load_dotenv
 
 class SetUp:
@@ -11,7 +11,7 @@ class SetUp:
 
     def retrieve_data(self, file_address):
         toReturn = []
-        with open(file_address, encoding="utf8") as file:
+        with open(file_address, encoding='utf8') as file:
             for line in file:
                 toReturn.append(json.loads(line))
         return toReturn
@@ -34,7 +34,7 @@ class PostgresSetup(SetUp):
         conn.close()
 
 
-    def query(self, query, db_name: str, file=False, explain=False, output=True):
+    def query(self, query, db_name='postgres', file=False, explain=False, output=True):
         load_dotenv()
         conn = psycopg.connect(f"dbname={db_name} user={os.getenv('USER_NAME')} password={os.getenv('PSQL_PASSWORD')}", 
                                autocommit=True)
@@ -73,10 +73,15 @@ class PostgresSetup(SetUp):
 
 class MongoSetup(SetUp):
     def __init__(self):
-        client = pymongo.MongoClient('mongodb://localhost:27017/')
+        client = pymongo.MongoClient(os.getenv('MONGODB_CLIENT'))
         self.testing = client.testing
         super().__init__()
     
-    def insert_data(self):
+    def insert_data(self, collection, data: list):
+        collection.insert_many(data)
+        pass
+
+    def drop_collections(self, collection):
+        collection.drop()
         pass
 

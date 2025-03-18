@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS businesses;
 CREATE TABLE businesses (
     business_id VARCHAR(22) PRIMARY KEY,
     name TEXT NOT NULL,
-address VARCHAR(255),
+    address VARCHAR(255),
     city VARCHAR(100),
     state VARCHAR(20),
     postal_code VARCHAR(15),

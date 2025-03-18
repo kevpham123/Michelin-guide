@@ -5,8 +5,8 @@ This file is used to initialize the Yelp database in MongoDB using pyMongo
 """
 
 data_retrieval = SetUp()
-mongo_DB = MongoSetup()
-testing = mongo_DB.testing
+mongo_db = MongoSetup()
+testing = mongo_db.testing
 
 """
 This section is used to initialize the businesses collections for our Yelp database
@@ -14,8 +14,12 @@ This section is used to initialize the businesses collections for our Yelp datab
 
 business_data = list(data_retrieval.retrieve_data('data/yelp_academic_dataset_business.json'))
 
+# Creating businesses collections then inserting our data into it
 businesses = testing.businesses
-businesses.insert_many(business_data)
+mongo_db.insert_data(businesses, business_data)
+
+# Delete variable to free up memory
+del business_data
 
 """
 This section is used to initialize the user collections for our Yelp database
@@ -23,8 +27,12 @@ This section is used to initialize the user collections for our Yelp database
 
 user_data = list(data_retrieval.retrieve_data('data/yelp_academic_dataset_user.json'))
 
+# Creating users collections then inserting our data into it
 users = testing.users
-users.insert_many(user_data)
+mongo_db.insert_data(users, user_data)
+
+# Delete variable to free up memory
+del user_data
 
 """
 This section is used to initialize the reviews collections for our Yelp database
@@ -32,5 +40,9 @@ This section is used to initialize the reviews collections for our Yelp database
 
 review_data = list(data_retrieval.retrieve_data('data/yelp_academic_dataset_review.json'))
 
+# Creating reviews collections then inserting our data into it
 reviews = testing.reviews
-reviews.insert_many(review_data)
+mongo_db.insert_data(reviews, review_data)
+
+# Delete variable to free up memory
+del review_data
