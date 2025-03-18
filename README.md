@@ -13,14 +13,7 @@ This project is an adaptation of the final project from Data 101 at UC Berkeley.
 To get started, you'll need to download the [Yelp dataset](https://business.yelp.com/data/resources/open-dataset/), extract the _.tar_ file, and place the business, review, and users json file into the data directory. In addition, you will also need to create a .env file to store the login information for Postgres. The file should contain a *USER_NAME* and *PASSWORD* variable for Postgres and *MONGO_CLIENT* for MongoDB. The final step is to run either ***mongo_db_setup.ipynb*** and ***postgres_db_setup.ipynb*** or run ***mongo_db_setup.py*** and ***postgres_db_setup.py***. Running either will produce the same Yelp Database but the latter will initalize significantly quicker. The Yelp database after initializing will contain relations businesses, reviews, and users.
 
 A diagram of the Yelp database is shown below. This diagram was created using [dbdiagram](https://dbdiagram.io/home).
-
-<iframe
-    width="100%"
-    height="600"
-    src='https://dbdiagram.io/e/67d9ed8175d75cc84496a469/67d9ee7375d75cc84496b452'> 
-</iframe>
-
-<iframe frameborder=0 style="min-width: 200px; width: 100%; height: 460px;" scrolling="no" seamless="seamless" srcdoc='<html><body><style type="text/css">.gist .gist-data { height: 400px; }</style><script src="https://dbdiagram.io/e/67d9ed8175d75cc84496a469/67d9ee7375d75cc84496b452"></script></body></html>'></iframe>
+![Yelp Database Diagram](https://i.imgur.com/WO5XNGj.gif)
 
 ---
 
