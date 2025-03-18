@@ -1,10 +1,11 @@
 import os
 import json
+import pymongo
 import psycopg as psycopg
 import pandas as pd
 from dotenv import load_dotenv
 
-class Setup:
+class SetUp:
     def __init__(self):
         pass
 
@@ -15,7 +16,7 @@ class Setup:
                 toReturn.append(json.loads(line))
         return toReturn
 
-class PostgresSetup(Setup):
+class PostgresSetup(SetUp):
     def __init__(self):
         super().__init__()
 
@@ -70,8 +71,12 @@ class PostgresSetup(Setup):
         else:
             return row
 
-class MongoSetup(Setup):
+class MongoSetup(SetUp):
     def __init__(self):
+        client = pymongo.MongoClient('mongodb://localhost:27017/')
+        self.testing = client.testing
         super().__init__()
     
+    def insert_data(self):
+        pass
 

@@ -1,4 +1,4 @@
-# DATA Directory
+# Data Directory
 
-Use this directory to place any large files.
+Use this directory to place all JSON and CSV files.
 **Everything** in this directory is excluded from git.
