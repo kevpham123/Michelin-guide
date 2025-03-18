@@ -14,10 +14,11 @@ To get started, you'll need to download the [Yelp dataset](https://business.yelp
 
 A diagram of the Yelp database is shown below. This diagram was created using [dbdiagram](https://dbdiagram.io/home).
 
-<iframe 
-width="700"
-height="600"
-src='https://dbdiagram.io/e/67d9ed8175d75cc84496a469/67d9ee7375d75cc84496b452'> </iframe>
+<iframe
+    width="100%"
+    height="600"
+    src='https://dbdiagram.io/e/67d9ed8175d75cc84496a469/67d9ee7375d75cc84496b452'> 
+</iframe>
 
 ---
 
