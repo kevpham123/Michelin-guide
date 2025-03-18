@@ -20,6 +20,8 @@ A diagram of the Yelp database is shown below. This diagram was created using [d
     src='https://dbdiagram.io/e/67d9ed8175d75cc84496a469/67d9ee7375d75cc84496b452'> 
 </iframe>
 
+<iframe frameborder=0 style="min-width: 200px; width: 100%; height: 460px;" scrolling="no" seamless="seamless" srcdoc='<html><body><style type="text/css">.gist .gist-data { height: 400px; }</style><script src="https://dbdiagram.io/e/67d9ed8175d75cc84496a469/67d9ee7375d75cc84496b452"></script></body></html>'></iframe>
+
 ---
 
 ## Objectives
