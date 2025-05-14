@@ -10,7 +10,7 @@ This project is an adaptation of the final project from Data 101 at UC Berkeley.
 
 ## Set Up
 
-To get started, you'll need to download the [Yelp dataset](https://business.yelp.com/data/resources/open-dataset/), extract the _.tar_ file, and place the business, review, and users json file into the data directory. In addition, you will also need to create a .env file to store the login information for Postgres. The file should contain a *USER_NAME* and *PASSWORD* variable for Postgres and *MONGO_CLIENT* for MongoDB. The final step is to run either ***mongo_db_setup.ipynb*** and ***postgres_db_setup.ipynb*** or run ***mongo_db_setup.py*** and ***postgres_db_setup.py***. Running either will produce the same Yelp Database but the latter will initalize significantly quicker. The Yelp database after initializing will contain relations businesses, reviews, and users.
+To get started, you'll need to download the [Yelp dataset](https://business.yelp.com/data/resources/open-dataset/), extract the _.tar_ file, and place the business, review, and users json file into the data directory. In addition, you will also need to create a _.env_ file to store the login information for Postgres. The file should contain a *USER_NAME* and *PASSWORD* variable for Postgres and *MONGO_CLIENT* variable for MongoDB. *MONGO_CLIENT* variable is the the MongoDB url. The final step is to run either `mongo_db_setup.ipynb` and `postgres_db_setup.ipynb` or run `mongo_db_setup.py` and `postgres_db_setup.py`. Running either will produce the same Yelp Database but the latter will initalize significantly quicker. The Yelp database after initializing will contain relations businesses, reviews, and users.
 
 A diagram of the Yelp database is shown below. This diagram was created using [dbdiagram](https://dbdiagram.io/home).
 ![Yelp Database Diagram](https://i.imgur.com/WO5XNGj.gif)
@@ -20,6 +20,8 @@ A diagram of the Yelp database is shown below. This diagram was created using [d
 ## Objectives
 
 This goal of this project is to learn how to perform ELT, clean data so that it fits our database constraints, and transform our data to learn something informative about it. With that said, I decided to create a Michelin guide based off elite users. According to Yelp, elite users are those that are "active and influential members, recognized for their valuable contributions to the Yelp community, including high-quality reviews, photos, and engagement". We will based our Michelin guide based off these users reviews and star ratings.
+
+To accomplish this goal, I have both `mongo_db_queries.ipynb` and `postgres_queries.ipynb` completing the same queries. Then we used `EXPLAIN ANALYZE` clause for Postgres and `explain` command for MongoDB to return our runtime. 
 
 ---
 
